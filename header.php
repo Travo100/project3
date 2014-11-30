@@ -26,15 +26,15 @@
 	 
     
      
-     <nav id="site-navigation" class="main-navigation" role="navigation">
-      <div class="container">
+  <nav id="site-navigation" class="main-navigation" role="navigation">
+    <div class="container">
       <div class="tt-blog-name col-sm-2">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
       </div>
       <button class="fa fa-bars menu-toggle"></button>
       <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'sf-menu', ) ); ?>
-      </div>
-    </nav><!-- #site-navigation -->
+    </div>
+  </nav><!-- #site-navigation -->
     <!--<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -42,5 +42,14 @@
 
 		
 	</header><!-- #masthead -->
-  <div class="container">
 	<div id="content" class="site-content">
+  <?php if ( !is_front_page()) { ?> 
+  <header class="entry-header">
+    <div class="container">
+      <div class="col-md-12">
+        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+      </div>
+    </div>
+  </header><!-- .entry-header -->
+  <?php } ?>
+  </div>

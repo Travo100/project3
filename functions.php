@@ -135,6 +135,9 @@ function superfish_libs()
     wp_enqueue_style('superfishnavbar');
 }
 
+function ilink($img) {
+	echo get_template_directory_uri() . '/img/' . $img;
+}
 
 /**
  * Implement the Custom Header feature.

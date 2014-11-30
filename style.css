@@ -115,6 +115,8 @@ body, button, input, select, textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-weight: 300 !important;
+  font-family: "Oswald", sans-serif !important;
 }
 
 p {
@@ -779,6 +781,112 @@ embed, iframe, object {
 ul#menu-all-pages, .menu-all-pages-container {
   -webkit-transition: all 0.25s ease-in-out;
           transition: all 0.25s ease-in-out;
+}
+
+/*HEADER LAYOUT */
+.entry-header {
+  background: #fff;
+  color: #000;
+  border-bottom: 4px solid #00aeef;
+  margin-bottom: 15px;
+}
+.entry-header h1 {
+  text-align: left;
+  color: #00aeef;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/*JUMBOTRON STYLES */
+.tt-jumbotron {
+  text-align: center;
+  border-bottom: 5px solid #00aeef;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.tt-jumbotron h1 {
+  font-size: 32px;
+  color: #000;
+}
+.tt-jumbotron h2 {
+  font-size: 24px;
+  color: #00aeef;
+  margin-bottom: 25px;
+}
+.tt-jumbotron p {
+  font-size: 24px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+}
+.tt-jumbotron img {
+  height: 85px;
+}
+@media (min-width: 600px) {
+  .tt-jumbotron .tt-jumbotron {
+    text-align: center;
+    border-bottom: 5px solid #00aeef;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  .tt-jumbotron h1 {
+    font-size: 72px;
+    color: #000;
+  }
+  .tt-jumbotron h2 {
+    font-size: 48px;
+    color: #00aeef;
+    margin-bottom: 25px;
+  }
+  .tt-jumbotron p {
+    font-size: 24px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+  }
+  .tt-jumbotron img {
+    height: 150px;
+    margin-top: 25px;
+  }
+}
+
+/*ABOUT ME STYLES */
+.tt-about-me .me-content h2 {
+  color: #00aeef;
+  display: none;
+}
+@media (min-width: 992px) {
+  .tt-about-me .me-content h2 {
+    font-size: 48px;
+    display: inherit;
+  }
+}
+.tt-about-me p {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+.tt-about-me img {
+  margin: 30px auto;
+  display: block;
+  width: 150px;
+}
+@media (min-width: 500px) {
+  .tt-about-me img {
+    width: 205px;
+  }
+}
+.tt-about-me .me-pic h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #00aeef;
+}
+@media (min-width: 600px) {
+  .tt-about-me .me-pic h2 {
+    font-size: 48px;
+  }
+}
+@media (min-width: 992px) {
+  .tt-about-me .me-pic h2 {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {

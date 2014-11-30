@@ -109,6 +109,8 @@ body, button, input, select, textarea
 
 h1, h2, h3, h4, h5, h6
   clear: both
+  font-weight: 300 !important 
+  font-family: $header-font !important
 
 p
   margin-bottom: 1.5em
@@ -690,6 +692,85 @@ embed, iframe, object
     padding: 0
 ul#menu-all-pages, .menu-all-pages-container
   transition: all 0.25s ease-in-out
+/*HEADER LAYOUT*/
+.entry-header 
+  background: #fff 
+  color: #000
+  border-bottom: 4px solid $primary-color
+  margin-bottom: 15px
+  h1 
+    text-align: left
+    color: $primary-color
+    margin: 0
+    padding: 10px 0
+
+/*JUMBOTRON STYLES*/
+.tt-jumbotron 
+  text-align: center
+  border-bottom: 5px solid $primary-color
+  padding-top: 15px 
+  padding-bottom: 25px
+  h1 
+    font-size: 32px
+    color: #000
+  h2 
+    font-size: 24px 
+    color: $primary-color 
+    margin-bottom: 25px
+  p 
+    font-size: 24px
+    font-family: $header-font
+    font-weight: 300
+  img 
+    height: 85px
+
+  @media (min-width: 600px)
+    .tt-jumbotron 
+      text-align: center
+      border-bottom: 5px solid $primary-color
+      padding-top: 15px 
+      padding-bottom: 25px
+    h1 
+      font-size: 72px
+      color: #000
+    h2 
+      font-size: 48px 
+      color: $primary-color 
+      margin-bottom: 25px
+    p 
+      font-size: 24px
+      font-family: $header-font
+      font-weight: 300
+    img 
+      height: 150px
+      margin-top: 25px
+/*ABOUT ME STYLES*/
+.tt-about-me 
+  .me-content
+    h2 
+      color: $primary-color
+      display: none
+      @media (min-width: 992px)
+        font-size: 48px
+        display: inherit
+  p 
+    font-size: 14px
+    font-family: $body-font
+  img 
+    margin: 30px auto
+    display: block
+    width: 150px
+    @media (min-width: 500px)
+      width: 205px
+  .me-pic 
+    h2 
+      text-align: center
+      font-size: 24px
+      color: $primary-color
+      @media (min-width: 600px)
+        font-size: 48px
+      @media (min-width: 992px)
+        display: none
 @media (min-width: 768px)
   .main-navigation
     ul 

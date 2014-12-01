@@ -71,24 +71,9 @@
                 
               </div>
             </div>
-          <?php 
-            endwhile;
-            endif; 
-            rewind_posts();
-          ?>
-            <?php 
-              $args = array( 'post_type' => 'portfolio-piece'); 
-              $loop = new WP_Query( $args );
-              while ( $loop->have_posts() ) : $loop->the_post(); 
-           ?> 
-            <div class="item">
-              <?php the_post_thumbnail(); ?>
-              <div class="carousel-caption">
-               
-              </div>
-            </div>
-             <?php 
+            <?php
             endwhile; 
+            endif;
             rewind_posts();
           ?>
           </div>

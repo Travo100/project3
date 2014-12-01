@@ -59,18 +59,21 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <?php 
+              $i = 0;
               $args = array( 'post_type' => 'portfolio-piece'); 
               $loop = new WP_Query( $args );
-              while ( $loop->have_posts() ) : $loop->the_post(); 
+              if ($loop->have_posts()) : while ( $loop->have_posts() ) : $loop->the_post(); 
            ?> 
-            <div class="item active">
+            <div class="item <?php if ($i == 0) { ?>active<?php } ?>">
+              <?php $i++; ?>
               <?php the_post_thumbnail(); ?>
               <div class="carousel-caption">
                 
               </div>
             </div>
           <?php 
-            endwhile; 
+            endwhile;
+            endif; 
             rewind_posts();
           ?>
             <?php 

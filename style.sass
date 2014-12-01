@@ -746,6 +746,9 @@ ul#menu-all-pages, .menu-all-pages-container
       margin-top: 25px
 /*ABOUT ME STYLES*/
 .tt-about-me 
+  padding-top: 15px 
+  padding-bottom: 25px 
+  border-bottom: 5px solid $primary-color
   .me-content
     h2 
       color: $primary-color
@@ -771,6 +774,28 @@ ul#menu-all-pages, .menu-all-pages-container
         font-size: 48px
       @media (min-width: 992px)
         display: none
+/*PORTFOLIO*/
+.tt-portfolio 
+  padding-top: 15px 
+  padding-bottom: 25px 
+  h2 
+    text-align: center 
+    font-size: 24px 
+    color: $primary-color
+    @media (min-width: 600px)
+      font-size: 48px
+  .col-centered 
+    display: block
+    float: none
+    margin: 0 auto
+  #tt-carousel 
+    border-radius: 8px
+    border: 5px solid $primary-color
+    img 
+      border-radius: 2px
+  .carousel-control.left, .carousel-control.right 
+    border-radius: 8px
+    background: transparent
 @media (min-width: 768px)
   .main-navigation
     ul 

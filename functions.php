@@ -139,6 +139,26 @@ function ilink($img) {
 	echo get_template_directory_uri() . '/img/' . $img;
 }
 
+add_theme_support( 'post-thumbnails' );
+
+add_action( 'init', 'create_posttype' );
+function create_posttype() {
+  register_post_type( 'portfolio-piece',
+    array(
+      'labels' => array(
+        'name' => __( 'Portfolio Piece' ),
+        'singular_name' => __( 'portfolio-piece' ),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'portfolio-piece'),
+      'supports' => array('title', 'editor', 'thumbnail')
+    )
+  );
+}
+
+
+
 /**
  * Implement the Custom Header feature.
  */

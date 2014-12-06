@@ -143,18 +143,31 @@ add_theme_support( 'post-thumbnails' );
 
 add_action( 'init', 'create_posttype' );
 function create_posttype() {
-  register_post_type( 'portfolio-piece',
+  register_post_type( 'portfolio',
     array(
       'labels' => array(
-        'name' => __( 'Portfolio Piece' ),
-        'singular_name' => __( 'portfolio-piece' ),
+        'name' => __( 'Portfolio' ),
+        'singular_name' => __( 'portfolio' ),
       ),
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array('slug' => 'portfolio-piece'),
-      'supports' => array('title', 'editor', 'thumbnail')
+      'rewrite' => array('slug' => 'portfolio'),
+      'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+      'capability_type' => 'post',
+      'menu_position' => 20,
+      'register_meta_box_tt' => 'add_url_metaboxes'
     )
   );
+}
+
+add_filter( 'pre_get_posts', 'my_get_posts' );
+
+function my_get_posts( $query ) {
+
+	if ( ( is_home() && $query->is_main_query() ) || is_feed() )
+	$query->set( 'post_type', array( 'post', 'portfolio' ) );
+
+return $query;
 }
 
 

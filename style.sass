@@ -796,6 +796,27 @@ ul#menu-all-pages, .menu-all-pages-container
   .carousel-control.left, .carousel-control.right 
     border-radius: 8px
     background: transparent
+    margin-top: 25%
+    i 
+      color: $secondary-color
+      font-size: 2em
+  .carousel-caption
+    i, a 
+      color: $white
+      font-size: 1.25em
+      background: $secondary-color
+      width: 40px 
+      height: 40px
+      line-height: 40px
+      text-align: center
+      border-radius: 100%
+      box-shadow: 2px 2px 10px #000
+      &:hover 
+        color: $secondary-color
+        background: $white
+    a 
+      margin: 0 20px
+
 @media (min-width: 768px)
   .main-navigation
     ul 
@@ -825,3 +846,5 @@ ul#menu-all-pages, .menu-all-pages-container
       left: 99% !important
       top: 0px !important
       position: absolute
+
+

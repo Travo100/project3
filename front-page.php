@@ -47,44 +47,39 @@
   <div class="tt-portfolio">
     <div class="container">
       <div class="col-md-10 col-centered">
-          <h2>Portfolio</h2>
-          <div id="tt-carousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-  <!--         <ol class="carousel-indicators">
-            <li data-target="#tt-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#tt-carousel" data-slide-to="1"></li>
-          </ol> -->
-
-            
-          <!-- Wrapper for slides -->
+        <h2>Portfolio</h2>
+        <div id="tt-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <?php 
               $i = 0;
-              $args = array( 'post_type' => 'portfolio-piece'); 
+              $args = array( 'post_type' => 'portfolio'); 
               $loop = new WP_Query( $args );
               if ($loop->have_posts()) : while ( $loop->have_posts() ) : $loop->the_post(); 
-           ?> 
+            ?> 
             <div class="item <?php if ($i == 0) { ?>active<?php } ?>">
               <?php $i++; ?>
               <?php the_post_thumbnail(); ?>
               <div class="carousel-caption">
-                
+                <a href="<?php the_permalink(); ?>"><i class="fa fa-info"></i></a>
+                <?php if ( get_post_meta( get_the_ID(), 'URL', true) ) : ?>
+                  <a href="<?php echo get_post_meta( get_the_ID(), 'URL', true); ?>" target="_blank"><i class="fa fa-link"></i></a>
+                <?php endif; ?>
               </div>
             </div>
             <?php
-            endwhile; 
-            endif;
-            rewind_posts();
-          ?>
+              endwhile; 
+              endif;
+              rewind_posts();
+            ?>
           </div>
-
           <!-- Controls -->
           <a class="left carousel-control" href="#tt-carousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <i class="fa fa-chevron-circle-left"></i>
             <span class="sr-only">Previous</span>
           </a>
           <a class="right carousel-control" href="#tt-carousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <i class="fa fa-chevron-circle-right"></i>
             <span class="sr-only">Next</span>
           </a>
         </div>

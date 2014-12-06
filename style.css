@@ -924,6 +924,29 @@ ul#menu-all-pages, .menu-all-pages-container {
 .tt-portfolio .carousel-control.left, .tt-portfolio .carousel-control.right {
   border-radius: 8px;
   background: transparent;
+  margin-top: 25%;
+}
+.tt-portfolio .carousel-control.left i, .tt-portfolio .carousel-control.right i {
+  color: #f68d10;
+  font-size: 2em;
+}
+.tt-portfolio .carousel-caption i, .tt-portfolio .carousel-caption a {
+  color: #fff;
+  font-size: 1.25em;
+  background: #f68d10;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 100%;
+  box-shadow: 2px 2px 10px #000;
+}
+.tt-portfolio .carousel-caption i:hover, .tt-portfolio .carousel-caption a:hover {
+  color: #f68d10;
+  background: #fff;
+}
+.tt-portfolio .carousel-caption a {
+  margin: 0 20px;
 }
 
 @media (min-width: 768px) {

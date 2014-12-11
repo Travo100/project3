@@ -62,8 +62,8 @@
               <?php the_post_thumbnail(); ?>
               <div class="carousel-caption">
                 <a href="<?php the_permalink(); ?>"><i class="fa fa-info"></i></a>
-                <?php if ( get_post_meta( get_the_ID(), 'URL', true) ) : ?>
-                  <a href="<?php echo get_post_meta( get_the_ID(), 'URL', true); ?>" target="_blank"><i class="fa fa-link"></i></a>
+                <?php if ( get_post_meta( get_the_ID(), 'port-link', true) ) : ?>
+                  <a href="<?php echo get_post_meta( get_the_ID(), 'port-link', true); ?>" target="_blank"><i class="fa fa-link"></i></a>
                 <?php endif; ?>
               </div>
             </div>
@@ -87,6 +87,14 @@
     </div>
   </div>
 </section>
-
+<section>
+  <div class="tt-contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p id="contact-me">Feel free to contact me about your next project</p>
+      <a href="tel:+1-858-442-3161"><i class="fa fa-mobile"></i> +1-858-442-3161</a>
+      <a href="mailto:travis@hitravis.com"><i class="fa fa-envelope"></i> travis@hitravis.com</a>
+    </div>
+  </div>
+</section>
 <?php get_footer(); ?>
-

@@ -94,11 +94,9 @@ blockquote, q {
 a {
   cursor: pointer;
 }
-a:focus {
-  outline: thin dotted;
-}
-a:hover, a:active {
+a:hover, a:active, a:focus {
   outline: 0;
+  color: #f68d10;
 }
 a img {
   border: 0;
@@ -374,17 +372,6 @@ textarea {
   vertical-align: top;
   /* Improves readability and alignment in all browsers */
   width: 100%;
-}
-
-/*menu STYLES */
-a {
-  color: royalblue;
-}
-a:visited {
-  color: purple;
-}
-a:hover, a:focus, a:active {
-  color: midnightblue;
 }
 
 /*MENU STYLES */
@@ -718,6 +705,16 @@ embed, iframe, object {
 }
 
 /*CUSTOM STYLES BEGIN HERE */
+header {
+  margin-bottom: 45px;
+}
+
+#site-navigation {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
 .main-navigation {
   background: #00aeef;
   padding: 15px 0;
@@ -949,6 +946,80 @@ ul#menu-all-pages, .menu-all-pages-container {
 }
 .tt-portfolio .carousel-caption a {
   margin: 0 20px;
+}
+
+/*CONTACT US STYLES */
+.tt-contact {
+  padding-top: 15px;
+  padding-bottom: 25px;
+  border-top: 5px solid #00aeef;
+  text-align: center;
+}
+.tt-contact h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #00aeef;
+}
+@media (min-width: 600px) {
+  .tt-contact h2 {
+    font-size: 48px;
+  }
+}
+.tt-contact p {
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+  color: #f68d10;
+}
+.tt-contact a {
+  color: #000;
+  font-family: 14px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+.tt-contact a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.tt-contact i {
+  color: #00aeef;
+  font-size: 2.5em;
+  vertical-align: middle;
+}
+.tt-contact .wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required, .tt-contact .wpcf7-form-control.wpcf7-textarea, .tt-contact .wpcf7-form-control.wpcf7-submit {
+  width: 100%;
+  max-width: 500px;
+}
+.tt-contact .wpcf7-form-control.wpcf7-submit {
+  background: #f68d10;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.5em;
+  margin: 0 auto;
+}
+.tt-contact .ajax-loader {
+  display: none;
+}
+
+/*FOOTER STYLES */
+footer {
+  background: #00aeef;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+footer a, footer p {
+  color: #fff;
+}
+footer p {
+  padding: 0;
+  margin: 0;
+}
+footer .social-media a, footer .social-media i {
+  font-size: 1.25em;
+  padding: 0 2.5px;
 }
 
 @media (min-width: 768px) {

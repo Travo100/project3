@@ -170,6 +170,28 @@ function my_get_posts( $query ) {
 return $query;
 }
 
+function add_portfolio_metabox() {
+	add_meta_box('portfolio-metabox', 'Site URL', 'render_portfolio_metabox', 'portfolio', 'side', 'low');
+}
+add_action('add_meta_boxes', 'add_portfolio_metabox');
+
+function render_portfolio_metabox($post) {
+?>
+<form method="post">
+<input type="hidden" name="portfolio-meta">
+<input type="text" name="port-link" value="<?php echo get_post_meta($post->ID, 'port-link', true); ?>" size="28">
+</form>
+<?php
+}
+
+function save_metabox_info($id) {
+	if (isset($_POST['portfolio-meta'])) {
+		if (isset($_POST['port-link'])) {
+			update_post_meta($id, 'port-link', $_POST['port-link']);
+		}
+	}
+}
+add_action('save_post', 'save_metabox_info');
 
 
 /**

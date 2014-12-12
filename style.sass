@@ -91,10 +91,9 @@ blockquote, q
 
 a
   cursor: pointer
-  &:focus
-    outline: thin dotted
-  &:hover, &:active
+  &:hover, &:active, &:focus
     outline: 0
+    color: $secondary-color
   img
     border: 0
 
@@ -335,15 +334,6 @@ textarea
   vertical-align: top
   /* Improves readability and alignment in all browsers */
   width: 100%
-
-/*menu STYLES*/
-
-a
-  color: royalblue
-  &:visited
-    color: purple
-  &:hover, &:focus, &:active
-    color: midnightblue
 
 /*MENU STYLES*/
 
@@ -643,6 +633,12 @@ embed, iframe, object
   display: block
 
 /*CUSTOM STYLES BEGIN HERE*/
+header 
+  margin-bottom: 45px
+#site-navigation 
+  position: fixed
+  top: 0
+  z-index: 9999
 .main-navigation
   background: $primary-color
   padding: 15px 0
@@ -818,6 +814,64 @@ ul#menu-all-pages, .menu-all-pages-container
         opacity: 1.0
     a 
       margin: 0 20px
+/*CONTACT US STYLES*/
+.tt-contact 
+  padding-top: 15px 
+  padding-bottom: 25px
+  border-top: 5px solid $primary-color
+  text-align: center
+  h2 
+    text-align: center 
+    font-size: 24px 
+    color: $primary-color
+    @media (min-width: 600px)
+      font-size: 48px
+  p 
+    font-size: 15px 
+    font-family: $header-font
+    color: $secondary-color
+  a 
+    color: #000
+    font-family: 14px 
+    display: block
+    margin: 0
+    padding: 0
+    line-height: 0
+    &:hover 
+      color: #000
+      text-decoration: none
+  i 
+    color: $primary-color
+    font-size: 2.5em
+    vertical-align: middle
+  .wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required, .wpcf7-form-control.wpcf7-textarea, .wpcf7-form-control.wpcf7-submit
+    width: 100%
+    max-width: 500px
+  .wpcf7-form-control.wpcf7-submit
+    background: $secondary-color
+    color: $white
+    font-weight: 300
+    font-size: 1.5em
+    margin: 0 auto
+  .ajax-loader 
+    display: none
+/*FOOTER STYLES*/
+footer 
+  background: $primary-color
+  color: $white
+  text-align: center
+  padding-top: 10px 
+  padding-bottom: 10px
+  a, p
+    color: $white
+  p
+    padding: 0
+    margin: 0
+  .social-media 
+    a, i  
+      font-size: 1.25em
+      padding: 0 2.5px
+
 
 @media (min-width: 768px)
   .main-navigation

@@ -13,9 +13,15 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<div class="container">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'mat225-thompson' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'mat225-thompson' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'mat225-thompson' ), 'mat225-thompson', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+				<div class="social-media">
+					<a href="https://www.facebook.com/travis.thompson.7311" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/Travo100" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="http://instagram.com/travo100/" target="_blank"><i class="fa fa-instagram"></i></a>
+					<a href="https://github.com/Travo100" target="_blank"><i class="fa fa-github"></i></a>
+				</div>
+				<div class="name">
+					<p>&copy;<?php echo date ('Y'); ?> <a href="mailto: Travo100@gmail.com">Travis Thompson</a></p>
+				</div>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

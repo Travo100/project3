@@ -930,7 +930,7 @@ ul#menu-all-pages, .menu-all-pages-container {
   color: #f68d10;
   font-size: 2em;
 }
-.tt-portfolio .carousel-caption i, .tt-portfolio .carousel-caption a {
+.tt-portfolio .carousel-caption i {
   color: #fff;
   font-size: 1.25em;
   background: #f68d10;
@@ -940,10 +940,12 @@ ul#menu-all-pages, .menu-all-pages-container {
   text-align: center;
   border-radius: 100%;
   box-shadow: 2px 2px 10px #000;
+  opacity: 0.9;
 }
-.tt-portfolio .carousel-caption i:hover, .tt-portfolio .carousel-caption a:hover {
+.tt-portfolio .carousel-caption i:hover {
   color: #f68d10;
   background: #fff;
+  opacity: 1;
 }
 .tt-portfolio .carousel-caption a {
   margin: 0 20px;

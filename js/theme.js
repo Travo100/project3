@@ -11,4 +11,6 @@
       }
     }
   });
+ $('.tweets').css('margin', '5px auto');
+ $('.tweets li').css('list-style', 'none');
 })( jQuery );

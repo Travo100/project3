@@ -550,6 +550,9 @@ button.fa.fa-bars.menu-toggle:hover {
   content: "";
   display: table;
 }
+.entry-content img {
+  margin: 0 auto 10px;
+}
 
 .comment-content:before, .comment-content:after {
   content: "";
@@ -1058,13 +1061,6 @@ footer .social-media a, footer .social-media i {
 }
 
 /*TWITTER EDITS */
-.widget-footer .tweets {
-  margin: 5px auto !important;
-}
-.widget-footer .tweets li {
-  list-style: none !important;
-}
-
 @media (min-width: 768px) {
   .main-navigation ul {
     clear: none;

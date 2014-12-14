@@ -11,6 +11,7 @@
 	</div><!-- #content -->
 	</div>
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php dynamic_sidebar( 'footer-sidebar' ); ?>
 		<div class="site-info">
 			<div class="container">
 				<div class="social-media">

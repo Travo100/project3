@@ -8,10 +8,10 @@
  */
 
 get_header(); ?>
-
+	<div class="container">
+	<div class="col-md-8">
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -100,6 +100,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
-
+	</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

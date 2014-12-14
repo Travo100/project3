@@ -93,7 +93,7 @@
       <h2>Contact</h2>
       <p id="contact-me">Feel free to contact me about your next project!</p>
       <a href="tel:+1-858-442-3161"><i class="fa fa-mobile"></i> +1-858-442-3161</a>
-      <a href="mailto:travis@hitravis.com"><i class="fa fa-envelope"></i> travis@hitravis.com</a>
+      <a href="mailto:Travo100@gmail.com"><i class="fa fa-envelope"></i> travo100@gmail.com</a>
       <?php echo do_shortcode( '[contact-form-7 id="1770" title="Contact form 1"]' ); ?>
     </div>
   </div>

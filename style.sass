@@ -110,6 +110,7 @@ h1, h2, h3, h4, h5, h6
   clear: both
   font-weight: 300 !important 
   font-family: $header-font !important
+  color: $primary-color
 
 p
   margin-bottom: 1.5em
@@ -141,7 +142,7 @@ code, kbd, tt, var
   font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace
 
 abbr, acronym
-  border-bottom: 1px dotted #666
+  border-bottom: 1px dotted #999
   cursor: help
 
 mark, ins
@@ -375,6 +376,20 @@ textarea
       left: 100%
   .current_page_item! > a, .current-menu-item! > a, .current_page_ancestor! > a
 
+.action-button 
+  width: 100%
+  background: $primary-color
+  color: $white
+  display: block
+  text-align: center
+  padding: 10px
+  font-family: $header-font
+  font-size: 18px
+  font-weight: 300
+  &:hover 
+    color: $white 
+    background: lighten($primary-color, 10)
+
 /*SMALL MENU STYLES*/
 
 .menu-toggle
@@ -534,7 +549,7 @@ button.fa.fa-bars.menu-toggle
   display: inline
 
 .page-content, .entry-content, .entry-summary
-  margin: 1.5em 0 0
+  margin: 0 0 0
 
 .page-links
   clear: both
@@ -690,9 +705,8 @@ ul#menu-all-pages, .menu-all-pages-container
   transition: all 0.25s ease-in-out
 /*HEADER LAYOUT*/
 .entry-header 
-  background: #fff 
   color: #000
-  border-bottom: 4px solid $primary-color
+  border-bottom: 4px solid #D6D6D6
   margin-bottom: 15px
   h1 
     text-align: left
@@ -844,6 +858,8 @@ ul#menu-all-pages, .menu-all-pages-container
     color: $primary-color
     font-size: 2.5em
     vertical-align: middle
+  .wpcf7-form
+    margin-top: 15px
   .wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required, .wpcf7-form-control.wpcf7-textarea, .wpcf7-form-control.wpcf7-submit
     width: 100%
     max-width: 500px
@@ -862,6 +878,8 @@ footer
   text-align: center
   padding-top: 10px 
   padding-bottom: 10px
+  .site-info 
+    margin-top: 10px
   a, p
     color: $white
   p
@@ -872,6 +890,22 @@ footer
       font-size: 1.25em
       padding: 0 2.5px
 
+/*PAGE STYLES*/
+.page-header 
+  border-bottom: 1px solid $secondary-color !important
+  h1 
+    color: $primary-color
+
+/*SINGLE STYLES*/
+.single-post 
+  margin-top: 15px
+
+/*TWITTER EDITS*/
+.widget-footer
+  .tweets 
+    margin: 5px auto !important
+    li 
+      list-style: none !important
 
 @media (min-width: 768px)
   .main-navigation

@@ -17,7 +17,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="top">
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'mat225-thompson' ); ?></a>
 <header id="masthead" class="site-header" role="banner">
@@ -32,13 +32,13 @@
   </nav><!-- #site-navigation -->
 </header><!-- #masthead -->
 <div id="content" class="site-content">
-    <?php if ( !is_front_page()) { ?> 
+    <!-- <?php if ( !is_front_page()) { ?> 
     <header class="entry-header">
       <div class="container">
         <div class="col-md-12">
           <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </div>
       </div>
-    </header><!-- .entry-header -->
-    <?php } ?>
+    </header>
+    <?php } ?> -->
 </div>

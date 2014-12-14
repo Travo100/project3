@@ -14,6 +14,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<?php the_post_thumbnail(); ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -22,8 +23,4 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php mat225_thompson_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -1,11 +1,14 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying a full width page with  
+ * no sidebar
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site will use a
  * different template.
+ * 
+ * Template Name: Full Width Page
  *
  * @package mat225-thompson
  */
@@ -17,7 +20,7 @@ get_header(); ?>
 		<h1><?php the_title(); ?></h1>
 	</div>
 	
-		<div class="col-md-8">
+		<div class="col-md-12">
 
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
@@ -40,5 +43,4 @@ get_header(); ?>
 			</div><!-- #primary -->
 		</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -115,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: 300 !important;
   font-family: "Oswald", sans-serif !important;
+  color: #00aeef;
 }
 
 p {
@@ -154,7 +155,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #999;
   cursor: help;
 }
 
@@ -416,6 +417,22 @@ textarea {
   left: 100%;
 }
 
+.action-button {
+  width: 100%;
+  background: #00aeef;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.action-button:hover {
+  color: #fff;
+  background: #23c3ff;
+}
+
 /*SMALL MENU STYLES */
 .menu-toggle {
   display: none;
@@ -591,7 +608,7 @@ button.fa.fa-bars.menu-toggle:hover {
 }
 
 .page-content, .entry-content, .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 0 0 0;
 }
 
 .page-links {
@@ -782,9 +799,8 @@ ul#menu-all-pages, .menu-all-pages-container {
 
 /*HEADER LAYOUT */
 .entry-header {
-  background: #fff;
   color: #000;
-  border-bottom: 4px solid #00aeef;
+  border-bottom: 4px solid #D6D6D6;
   margin-bottom: 15px;
 }
 .entry-header h1 {
@@ -987,6 +1003,9 @@ ul#menu-all-pages, .menu-all-pages-container {
   font-size: 2.5em;
   vertical-align: middle;
 }
+.tt-contact .wpcf7-form {
+  margin-top: 15px;
+}
 .tt-contact .wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required, .tt-contact .wpcf7-form-control.wpcf7-textarea, .tt-contact .wpcf7-form-control.wpcf7-submit {
   width: 100%;
   max-width: 500px;
@@ -1010,6 +1029,9 @@ footer {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+footer .site-info {
+  margin-top: 10px;
+}
 footer a, footer p {
   color: #fff;
 }
@@ -1020,6 +1042,27 @@ footer p {
 footer .social-media a, footer .social-media i {
   font-size: 1.25em;
   padding: 0 2.5px;
+}
+
+/*PAGE STYLES */
+.page-header {
+  border-bottom: 1px solid #f68d10 !important;
+}
+.page-header h1 {
+  color: #00aeef;
+}
+
+/*SINGLE STYLES */
+.single-post {
+  margin-top: 15px;
+}
+
+/*TWITTER EDITS */
+.widget-footer .tweets {
+  margin: 5px auto !important;
+}
+.widget-footer .tweets li {
+  list-style: none !important;
 }
 
 @media (min-width: 768px) {

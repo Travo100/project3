@@ -85,6 +85,14 @@ function mat225_thompson_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	register_sidebar(array(
+		'name' => 'footer sidebar',
+		'id' => 'footer-sidebar',
+		'before_widget' => '<div class="widget-footer">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
 }
 add_action( 'widgets_init', 'mat225_thompson_widgets_init' );
 
@@ -150,7 +158,7 @@ function create_posttype() {
         'singular_name' => __( 'portfolio' ),
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'rewrite' => array('slug' => 'portfolio'),
       'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
       'capability_type' => 'post',
@@ -160,7 +168,7 @@ function create_posttype() {
   );
 }
 
-add_filter( 'pre_get_posts', 'my_get_posts' );
+/*add_filter( 'pre_get_posts', 'my_get_posts' );
 
 function my_get_posts( $query ) {
 
@@ -168,7 +176,7 @@ function my_get_posts( $query ) {
 	$query->set( 'post_type', array( 'post', 'portfolio' ) );
 
 return $query;
-}
+}*/
 
 function add_portfolio_metabox() {
 	add_meta_box('portfolio-metabox', 'Site URL', 'render_portfolio_metabox', 'portfolio', 'side', 'low');

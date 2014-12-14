@@ -12,10 +12,13 @@
  */
 
 get_header(); ?>
-
+<div class="container">
+<div class="page-header">
+	<h1><?php wp_title( '|', true, 'right' ); ?></h1>
+</div>
+<div class="col-md-8">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -27,8 +30,7 @@ get_header(); ?>
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					get_template_part( 'content', get_post_format() );
-				?>
-
+				?> 
 			<?php endwhile; ?>
 
 			<?php mat225_thompson_paging_nav(); ?>
@@ -41,6 +43,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
